@@ -30,8 +30,17 @@
             echo "<p>$key</p>";
         }
     }
-
+    $amount=800;
+    $taxRate=0.0825;
+    $addedTax=$amount*$taxRate;
+    echo "$addedTax <br>";
     
+    function tax_calc($amount, $tax){
+        $calculate_tax = $amount * $tax;
+        $amount = round($amount+$calculate_tax);
+        return $amount;
+    }
+    echo tax_calc(750, 0.223);
     ?>
 </body>
 </html>
